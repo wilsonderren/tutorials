@@ -1,0 +1,41 @@
+{
+  "exercise_name": "Different types of CSS selectors",
+  "set_up": {
+    "css": true,
+    "html": true,
+    "browser": true
+  },
+  "steps": [
+    {
+      "text": "<p>One of the best indicators that you’re starting to understand how CSS works is being able to choose what sort of selector to use to style parts of your web page.</p><p>In this tutorial we will look at two different types of selectors, <strong>element selectors</strong> and <strong>class selectors</strong>, to see what each type of selector is good at.</p>",
+      "css": "/* no CSS yet */",
+      "html": "<p>A paragraph of text</p><p class=\"important\">An important paragraph of text</p><p>A paragraph of text</p><p class=\"less-important\">A less important paragraph of text</p><div class=\"important\"><h2>An important box of text</h2><p>Here is some important text</p></div>",
+      "browser": ""
+    },
+
+    {
+      "text": "<p>So let’s start with an <strong>element</strong> selector. To create an element selector, find the HTML you want to style - let’s start with the p tag. Take your HTML tag: &lt;p&gt;, and remove the greater-than and less-than signs, so you have <code>p</code>. This is your selector.</p><p>Then you add to this a starting curly bracket <code>{</code> and an ending curly bracket <code>}</code>.</p>",
+      "css": "/* this is an incomplete element selector */ p {}",
+      "html": "<p>A paragraph of text</p><p class=\"important\">An important paragraph of text</p><p>A paragraph of text</p><p class=\"less-important\">A less important paragraph of text</p><div class=\"important\"><h2>An important box of text</h2><p>Here is some important text</p></div>",
+      "browser": ""
+    },
+    {
+      "text": "<p>Hmmm - nothing has happened that we can see yet. That is because we’ve created a selector but no <strong>declarations</strong>.</p><p>A declaration is made up of a property and a value. An example of a property is the <code>text colour</code>, and an example of a property value is <code>red</code>.</p><p>Of course it’s not as straightforward as that, because <code>text colour</code> is referred to as just <code>color</code> in CSS - American spelling and all.</p><p>When we add this code to our page we can see all our paragraph text has turned red, as expected. But there are a few issues...</p>",
+      "css": "/* this is a complete CSS declaration */ p { color:red; }",
+      "html": "<p>A paragraph of text</p><p class=\"important\">An important paragraph of text</p><p>A paragraph of text</p><p class=\"less-important\">A less important paragraph of text</p><div class=\"important\"><h2>An important box of text</h2><p>Here is some important text</p></div>",
+      "browser": ""
+    },
+    {
+      "text": "<p>All the text in the paragraphs has turned red. This could be the effect we are after, but it’s not very controllable. Ideally we might just want to turn important text red. How can we do that?</p>",
+      "css": "/* this CSS declaration turns paragraphs red */ p { color:red; }",
+      "html": "<p>A paragraph of text</p><p class=\"important\">An important paragraph of text</p><p>A paragraph of text</p><p class=\"less-important\">A less important paragraph of text</p><div class=\"important\"><h2>An important box of text</h2><p>Here is some important text</p></div>",
+      "browser": ""
+    },
+    {
+      "text": "<p>We can be more ’careful’ about what we select with CSS by adding a class selector to an element selector.</p><p>We can see classes in the HTML - for example we can see paragraphs with a class of ’important’, written like this <code>&lt;p class=&quot;important&quot;&gt;</code>.<p><p>We can ’target’ just these paragraphs by slightly changing our CSS selector.</p><p>Instead of writing <code>p</code> we write <code>p.important</code> - in plain english this means ’find all the paragraphs with a class of important’.</p><p>This makes it much easier to target specific parts of our page.</p><p><a href=\"https://codepen.io/wilsondmmu/pen/LYGzwzz\">Now try it yourself with this CodePen</a>.</p>",
+      "css": "/* this is a CSS declaration that selects paragraphs with a class of important and turns them red */ p.important { color:red; }",
+      "html": "<p>A paragraph of text</p><p class=\"important\">An important paragraph of text</p><p>A paragraph of text</p><p class=\"less-important\">A less important paragraph of text</p><div class=\"important\"><h2>An important box of text</h2><p>Here is some important text</p></div>",
+      "browser": ""
+    }
+  ]
+}
